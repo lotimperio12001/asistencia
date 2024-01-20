@@ -1,23 +1,34 @@
 import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
+import { IonContent, IonHeader, 
+  IonPage, IonTitle,  
+  IonToolbar, IonCard,  
+  IonCardContent, IonButton,
+  IonGrid, IonRow, IonCol, 
+  IonInput, IonIcon } from '@ionic/react';
+import { person, lockClosed, star, logIn, personAdd } from 'ionicons/icons';
+
 import './Tab1.css';
+import Create from './../components/create/create';
 
 const Tab1: React.FC = () => {
   return (
     <IonPage>
       <IonHeader>
         <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
+          <IonTitle>Registro</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer name="Tab 1 page" />
+      <IonContent fullscreen color="medium" className="ion-padding">
+        <IonCard>
+          <br/>
+          <center>
+            <img alt="Imagen" src="/assets/images/login.png"/>
+          </center>
+          <br/>
+          <IonCardContent>
+            <Create/>
+          </IonCardContent>
+        </IonCard>        
       </IonContent>
     </IonPage>
   );
